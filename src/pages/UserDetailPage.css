@@ -1,0 +1,127 @@
+/* UserDetailPage.css */
+
+#user-page {
+    background-color: #f8f8f8;
+    padding: 80px;
+    margin-top: 100px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.user-summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.user-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.user-meta p {
+    margin: 0;
+}
+
+.badge {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.user-description {
+    margin-top: 20px;
+}
+
+.user-description h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.user-description p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.user-rules {
+    margin-top: 20px;
+}
+
+.user-rules h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.user-rules ul {
+    padding-left: 20px;
+}
+
+.user-rules li {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+.btns {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.btn-cancel {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-cancel:hover {
+    background-color: #c9302c;
+}
+
+button {
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #31b0d5;
+}

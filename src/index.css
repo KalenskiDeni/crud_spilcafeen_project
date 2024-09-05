@@ -1,0 +1,427 @@
+/* ---------- Root Variables ---------- */
+:root {
+  --green: rgb(38, 76, 89);
+  --dark-green: rgb(9, 47, 59);
+  --light-green: rgb(172, 198, 201);
+  --light-grey: #f1f1f4;
+  --text-color-danger: rgb(152, 58, 58);
+  --text-color-dark: #333;
+  --text-color-light: #f1f1f1;
+  --text-color-danger: #f44250;
+  --white: #f1f1f1;
+}
+
+/* ---------- HTML, body and rest styling ---------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+html {
+
+  color: var(--text-color-dark);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  height: 100%;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* ---------- Typography ---------- */
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+h3 {
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: var(--dark-green);
+}
+
+/* ---------- Form, input and button Styling ---------- */
+
+textarea,
+input,
+button,
+select {
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+  background-color: white;
+  line-height: 1.5;
+  margin: 0;
+}
+button {
+  color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1em 2em;
+  background-color: #BF171C;
+  transition: 0.5s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #BF171C;
+  color: var#BF171C;
+}
+
+textarea:hover,
+input:hover,
+button:hover {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+button:active {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
+  transform: translateY(1px);
+}
+
+form[action$="destroy"] button,
+.btn-cancel {
+  background-color: var(--white);
+  color: #BF171C;
+}
+
+form[action$="destroy"] button:hover,
+.btn-cancel:hover {
+  background-color: var(--white);
+  color: #BF171C;
+}
+
+form input {
+  width: 100%;
+}
+
+form .btns {
+  grid-column: 2;
+}
+
+form img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+.btns {
+  display: flex;
+  gap: 0.5em;
+}
+
+/* ---------- Form Styling ---------- */
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1em;
+  align-items: center;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 1.5em;
+  background-color: var(--white);
+  transition: 0.5s;
+  animation: fadeIn 0.5s;
+  border-radius: 8px;
+  margin: auto;
+}
+
+#sign-in-form,
+#sign-up-form {
+  width: 35rem;
+}
+
+
+
+/* Style the links inside the navigation bar */
+nav a {
+  display: inline-block;
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+ 
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+
+
+/* Add a color to the active/current link */
+nav a.active {
+  background-color: var(--light-green);
+  color: var(--green);
+}
+
+/* ---------- Page Styling ---------- */
+.page {
+  animation: fadeIn 0.5s;
+  padding: 140px 2em 2em;
+}
+
+/* ---------- Container Styling ---------- */
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ---------- Animations ---------- */
+/* fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- grid container styling ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.grid > .user-card {
+  cursor: pointer;
+}
+
+/* ---------- Filter Grid styling ---------- */
+
+
+.grid-filter select {
+  width: 100%;
+  max-width: 120px; /* Controls the max width, keeping responsiveness */
+  height: 40px; /* Standardizes height for both elements */
+  border-radius: 12px;
+  border: 1px solid #C7C7C7;
+  margin-left: 180px; /* Remove margin-bottom */
+  padding: 0 12px; /* Adds some padding for better aesthetics */
+
+}
+
+
+.grid-filter input {
+  width: 190%;
+  max-width: 900px; /* Controls the max width, keeping responsiveness */
+  height: 40px; /* Standardizes height for both elements */
+  border-radius: 12px;
+  border: 1px solid #C7C7C7;
+  margin: 0; /* Remove margin-bottom */
+  padding: 0 12px; /* Adds some padding for better aesthetics */
+
+}
+
+
+.grid-filter {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  gap: 10px; /* Small gap between input and button */
+  padding: 0px; /* Padding around the filter bar */
+
+  border-radius: 12px; /* Rounded corners to match input/select */
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for emphasis */
+  margin-bottom: 30px;
+}
+
+.grid-filter button {
+  height: 40px; /* Same height as input/select */
+  padding: 0 20px; /* Adequate padding for button */
+  border-radius: 12px; /* Match radius with input/select */
+  color: var(--white); /* White text */
+  border: none;
+  cursor: pointer;
+}
+
+.grid-filter button:hover {
+  background-color: var(--dark-green); /* Darker green on hover */
+}
+
+.grid-filter input::placeholder {
+  color: #C7C7C7; /* Placeholder text color */
+}
+
+/* ---------- User Card styling ---------- */
+
+
+
+.user-card {
+  display: flex;
+  flex-direction: row; /* Arrange image and text side by side */
+  align-items: center; /* Center items vertically */
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 1em; /* Adjust padding to fit content better */
+  background-color: var(--white);
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 10px;
+  max-width: 700px; /* Set a max width to control the size */
+}
+
+.user-card img {
+  height: 100px; /* Adjust size based on the example */
+  width: 100px; /* Adjust size based on the example */
+  border-radius: 10px; /* Keep the border-radius similar */
+  margin-right: 1em; /* Adjust space between image and content */
+  object-fit: cover;
+}
+
+.user-card-content {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  flex-grow: 1; /* Allow content to grow and fill available space */
+}
+
+.user-card .title {
+  font-family: Poppins, sans-serif;
+  font-size: 24px; /* Adjusted font size */
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0.25em; /* Reduced margin */
+  margin-top: 5px;
+}
+
+.user-card p {
+  font-size: 0.9em; /* Ensure consistent font size */
+  color: #555; /* Subdued color for description text */
+  margin: 0; /* Remove margin */
+}
+
+.user-card .info {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #777; /* Subdued color for info text */
+}
+
+.user-card .info span {
+  margin-right: 1em; /* Space between info items */
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+}
+
+.user-card .info span img {
+  height: 18px; /* Icon size */
+  width: 18px; /* Icon size */
+  margin-right: 0.3em; /* Space between icon and text */
+}
+
+.user-card:hover {
+  transform: translateY(-5px); /* Adds a subtle lift effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Softer, more natural shadow */
+}
+
+/* Add this if you want the A2 badge */
+.user-card .badge {
+  background-color: #d9534f; /* Red color for A2 badge */
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.3em 0.6em;
+  font-size: 0.75em;
+  margin-left: auto; /* Push badge to the far right */
+}
+
+
+/* ---------- avatar styling ---------- */
+
+.avatar {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1.2em;
+  text-align: left;
+}
+
+.avatar span {
+  margin: 0 0 0 1em;
+}
+
+.avatar h3,
+.avatar p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.user-card .avatar img {
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ---------- User Page styling ---------- */
+
+#user-page .user-card > img {
+  height: auto;
+}
+
+#user-page .btns {
+  padding: 1em 0;
+}
+
+/* ---------- Login Form Styling ---------- */
+#sign-in-page,
+#sign-up-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+
+.error-message {
+  color: var(--text-color-danger);
+  margin-top: 10px;
+  grid-column: 2;
+}
+.page-title {
+  font-size: 2.5rem; /* Adjust size as needed */
+  font-weight: bold;
+  margin-bottom: 20px; /* Space between title and filter bar */
+  text-align: left; /* Align text to the left */
+  color: var(--text-color-dark); /* Adjust color if necessary */
+  margin-top: -10px;
+}
